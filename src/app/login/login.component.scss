@@ -1,0 +1,61 @@
+@import '../../stylesheets/_variables.scss';
+
+.card {
+  margin: 5rem auto 0;
+  .card-title {
+    text-align: center;
+  }
+  form {
+    .form-group{
+      position: relative;
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        padding: 0 0.5rem;
+        color: $text-muted;
+      }
+    }
+    input[type="email"], input[type="password"] {
+      padding: 0 2rem;
+      border-radius: 0;
+      font-size: 1.2rem;
+    }
+    .forgot-pass{
+      text-align: center;
+      margin: 0.9rem auto;
+      a{
+        color: #000;
+        font-size: 0.9rem;
+      }
+    }
+    p {
+      font-size: 0.7rem;
+      color: $text-muted;
+      text-align: center;
+    }
+    .seperator{
+      background: 0 0;
+      height: 34px;
+      position: relative;
+      text-align: center;
+      h6 {
+        background-color: #fff;
+        display: inline-block;
+        margin: 0;
+        padding: 8px;
+      }
+      hr {
+        border-top: 1px solid #dce0e0;
+        margin: -16px auto 10px;
+        width: 90%;
+      }
+    }
+    .btn-facebook{
+      margin: 0.5rem 0;
+    }
+  }
+}
