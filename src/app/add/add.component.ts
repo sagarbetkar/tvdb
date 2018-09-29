@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  shows$: object;
+
+  constructor(private show: DataService) { }
 
   ngOnInit() {
   }
 
+  updateSearch(event){
+    console.log(event);
+    //this.show.getTvdb(event.showName).subscribe((data) => this.shows$ = data['data']);
+  }
 }

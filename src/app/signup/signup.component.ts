@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-signup',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-
-  constructor() { }
+  user: Object = {};
+  constructor( private data: DataService ) { }
 
   ngOnInit() {
+  }
+
+  createUser() {
+    this.data.createUser(this.user).subscribe((data) => this.user = data);
   }
 
 }
