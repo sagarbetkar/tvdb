@@ -16,7 +16,6 @@ export class AddComponent implements OnInit {
   }
 
   updateSearch(event){
-    console.log(event);
-    //this.show.getTvdb(event.showName).subscribe((data) => this.shows$ = data['data']);
+    this.show.getTvdb(event.showName).subscribe((data) => this.shows$ = data['data']);
   }
 }
