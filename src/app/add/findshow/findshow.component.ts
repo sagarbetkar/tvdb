@@ -17,7 +17,7 @@ export class FindshowComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchShow(){
+  searchShow() {
     this.searchTermChanged.emit({showName: this.showName});
   }
 

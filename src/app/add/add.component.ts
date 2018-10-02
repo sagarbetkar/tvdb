@@ -15,7 +15,7 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateSearch(event){
+  updateSearch(event) {
     this.show.getTvdb(event.showName).subscribe((data) => this.shows$ = data['data']);
   }
 }
