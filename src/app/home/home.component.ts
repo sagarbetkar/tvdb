@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  subshows$: Object;
+
+  constructor( private data: DataService ) { }
 
   ngOnInit() {
+    this.data.getAllShows().subscribe((data) => this.subshows$ = JSON.parse(data['data']) );
   }
 
 }

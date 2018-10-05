@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="card col-sm-3 mx-1 my-1" style="width: 18rem;" *ngFor="let show of shows">
-      <img class="card-img-top" src="http://thetvdb.com/banners/{{show.banner}}" alt="Card image cap">
+      <img class="card-img-top" src="http://thetvdb.com/banners/{{show.poster}}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{show.seriesname}}</h5>
-        <h6>{{show.firstaired}}</h6>
+        <h6>{{show.genre}}</h6>
         <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Add</a>
+        <a href="#" class="btn btn-primary" (click)="addfav()">Add</a>
       </div>
     </div>
   </div>

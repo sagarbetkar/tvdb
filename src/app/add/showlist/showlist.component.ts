@@ -14,4 +14,8 @@ export class ShowlistComponent implements OnInit {
   ngOnInit() {
   }
 
+  addfav() {
+    
+  }
+
 }
