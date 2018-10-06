@@ -17,7 +17,7 @@ export class DataService {
   }
 
   getTvdb(seriesName) {
-    return this.http.get("http://localhost:3000/api/tvdb?seriesName=" + seriesName);
+    return this.http.get('http://localhost:3000/api/tvdb?seriesName=' + seriesName);
   }
 
   postSubscribe(data) {
