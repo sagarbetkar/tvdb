@@ -10,12 +10,11 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  subshows$: Object;
 
   constructor( private data: DataService ) { }
 
   ngOnInit() {
-    this.data.getAllShows().subscribe((data) => this.subshows$ = JSON.parse(data['data']) );
+
   }
 
 }

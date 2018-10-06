@@ -3,7 +3,7 @@
     <div class="card auth-card">
       <div class="card-body">
         <h3 class="card-title">Sign Up</h3>
-        <form (ngSubmit)="onSubmit()">
+        <form>
           <div class="form-group">
             <input type="text" class="form-control" [(ngModel)]="user.name" id="name" name="name" placeholder="Name">
             <span class="ion-md-person"></span>
@@ -17,7 +17,7 @@
             <span class="ion-md-key"></span>
           </div>
           <p>By clicking on Sign up, you agree to <a href="#">terms & conditions</a> and <a href="#">privacy policy</a>.</p>
-          <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+          <button type="submit" class="btn btn-primary btn-block" (click)="createUser()">Sign up</button>
           <p>Already have an account? <a routerLink= "/login">Log in now</a>
         </form>
       </div>
